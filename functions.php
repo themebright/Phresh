@@ -37,11 +37,12 @@ add_action( 'after_setup_theme', 'phresh_setup' );
 
 function phresh_assets() {
 
-	wp_enqueue_style( 'phresh-fonts', 'https://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Montserrat:400,700|Karla:400,700' );
+	wp_enqueue_style( 'phresh-fonts', 'https://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Montserrat:400,700|Karla:400,700|Libre+Franklin:300,400,700' );
 	wp_enqueue_style( 'normalize', esc_url( get_template_directory_uri() . '/assets/vendor/normalize.css' ) );
 	wp_enqueue_style( 'phresh', esc_url( get_stylesheet_uri() ), array( 'phresh-fonts', 'normalize', 'dashicons' ) );
 
-	wp_enqueue_script( 'phresh', esc_url( get_template_directory_uri() . '/assets/js/script.js' ), array( 'jquery' ), false, true );
+	wp_enqueue_script( 'sticky', esc_url( get_template_directory_uri() . '/assets/vendor/sticky.js' ), array( 'jquery' ), false, true );
+	wp_enqueue_script( 'phresh', esc_url( get_template_directory_uri() . '/assets/js/script.js' ), array( 'jquery', 'sticky' ), false, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'phresh_assets' );

@@ -1,10 +1,9 @@
-	</main>
+		</main>
 
-	<footer class="site-footer">
-		<div class="wrap">
-			copyright info and stuff down here
-		</div>
-	</footer>
+		<footer>
+			<p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo() ?></p>
+		</footer>
+	</div>
 
 	<?php wp_footer(); ?>
 </body>
