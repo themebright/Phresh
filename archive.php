@@ -7,6 +7,7 @@ get_header();
 <div class="wrap wrap-narrow">
 	<?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
 	<?php the_archive_description( '<p class="archive-description">', '</p>' ); ?>
+	<hr class="archive-rule">
 
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post(); ?>

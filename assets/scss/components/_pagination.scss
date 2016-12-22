@@ -1,0 +1,36 @@
+/* ==================================================
+   Pagination
+================================================== */
+
+.pagination {
+	margin-top: 8rem;
+	padding-right: 30px;
+	padding-left: 30px;
+	line-height: 20px;
+	font-size: 0;
+	text-align: center;
+	color: co(text, light);
+
+	a {
+		@include underline();
+	}
+}
+
+.pagination .page-numbers {
+	display: inline-block;
+	vertical-align: top;
+	width: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 1.6rem;
+}
+
+.pagination .prev {
+	float: left;
+	margin-left: -30px;
+}
+
+.pagination .next {
+	float: right;
+	margin-right: -30px;
+}

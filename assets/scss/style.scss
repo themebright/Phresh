@@ -1,0 +1,35 @@
+/**
+ * Theme Name:  Phresh
+ * Theme URI:
+ * Author:      Galen Gidman
+ * Author URI:  https://galengidman.com/
+ * Description:
+ * Version:     1.0.0
+ * License:     GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags:        tag
+ * Text Domain: phresh
+ */
+
+@import 'library/config';
+@import 'library/functions';
+@import 'library/mixins';
+
+@import '../vendor/normalize';
+@import 'components/reset';
+@import 'components/typography';
+@import 'components/media';
+@import 'components/forms';
+@import 'components/wrap';
+@import 'components/site-wrap';
+@import 'components/site-header';
+@import 'components/site-main';
+@import 'components/site-footer';
+@import 'components/archive';
+@import 'components/entry';
+@import 'components/wp';
+@import 'components/posts-nav';
+@import 'components/pagination';
+@import 'components/comments';
+@import 'components/comment-form';
+@import 'components/separator';

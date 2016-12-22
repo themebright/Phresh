@@ -1,0 +1,41 @@
+/* ==================================================
+   Posts Nav
+================================================== */
+
+.posts-nav {
+	margin-top: 8rem;
+
+	a {
+		@include underline();
+	}
+}
+
+.posts-nav .dashicons {
+	margin-top: .2rem;
+}
+
+@media screen and (max-width: 479px) {
+	.posts-nav {
+		text-align: center;
+	}
+
+	.posts-nav-next {
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.posts-nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.posts-nav-prev,
+	.posts-nav-next {
+		width: 48%;
+	}
+
+	.posts-nav-next {
+		text-align: right;
+	}
+}

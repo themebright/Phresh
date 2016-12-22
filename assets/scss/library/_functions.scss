@@ -1,0 +1,11 @@
+@function ff($key) {
+	@return map-get($fonts, $key);
+}
+
+@function zi($key) {
+	@return map-get($indexes, $key);
+}
+
+@function co($key, $modifier: default) {
+  @return map-get(map-get($colors, $key), $modifier);
+}

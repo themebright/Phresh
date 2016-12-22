@@ -1,0 +1,47 @@
+/* ==================================================
+   Entry
+================================================== */
+
+.entry + .entry {
+	margin-top: 8rem;
+}
+
+.entry-title {
+	margin: 0;
+}
+
+.entry-meta {
+	margin-top: 1rem;
+	color: co(text, light);
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: co(text);
+		}
+	}
+}
+
+.entry-main {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+
+	a {
+		@include underline();
+	}
+}
+
+.entry-footer {
+	font-size: 1.2rem;
+	color: co(text, light);
+	text-transform: uppercase;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: co(text);
+		}
+	}
+}

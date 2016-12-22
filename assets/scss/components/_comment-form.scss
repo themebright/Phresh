@@ -1,0 +1,36 @@
+/* ==================================================
+   Comment Form
+================================================== */
+
+.comment-respond {
+	margin-top: 8rem;
+}
+
+#cancel-comment-reply-link {
+	float: right;
+	line-height: 20px;
+	margin-top: 8px;
+	margin-left: 2rem;
+}
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-respond .form-submit {
+	margin-top: 2rem;
+	margin-bottom: 0;
+}
+
+.comment-respond label {
+	display: block;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	color: co(text, light);
+	text-transform: uppercase;
+}
+
+.comment-respond textarea,
+.comment-respond input {
+	width: 100%;
+}

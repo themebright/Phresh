@@ -1,0 +1,19 @@
+/* ==================================================
+   Media
+================================================== */
+
+img,
+svg,
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+figure {
+	margin: 0;
+}

@@ -1,0 +1,18 @@
+$colors: (
+	accent: ( default: #69c5e4 ),
+	border: ( default: #ddd ),
+	text: (
+		default: #666,
+		dark: #222,
+		light: #aaa,
+	),
+);
+
+$fonts: (
+	primary: #{'Libre Franklin', sans-serif},
+	secondary: #{'Lato', sans-serif},
+);
+
+$indexes: (
+	header: 100,
+);
