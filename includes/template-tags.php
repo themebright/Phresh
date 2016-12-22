@@ -76,8 +76,8 @@ function phresh_posts_nav() {
 function phresh_pagination_arrow_attr() {
 
 	return array(
-		'prev_text' => phresh_icon( 'arrow-left-alt' ) . phresh_srt( esc_html__( 'Previous', 'devoted' ) ),
-		'next_text' => phresh_srt( esc_html__( 'Next', 'devoted' ) ) . phresh_icon( 'arrow-right-alt' ),
+		'prev_text' => phresh_icon( 'arrow-left-alt' ) . phresh_srt( esc_html__( 'Previous', 'phresh' ) ),
+		'next_text' => phresh_srt( esc_html__( 'Next', 'phresh' ) ) . phresh_icon( 'arrow-right-alt' ),
 	);
 
 }

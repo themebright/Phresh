@@ -12,11 +12,11 @@ if ( post_password_required() ) {
 			<h2><?php comments_number(); ?></h2>
 
 			<ol class="comments">
-				<?php wp_list_comments( apply_filters( 'devoted_list_comments', array(
+				<?php wp_list_comments( apply_filters( 'phresh_list_comments', array(
 					'style' => 'ol',
 					'type' => 'comment',
 					'avatar_size' => 80,
-					'reply_text' => phresh_icon( 'editor-break' ) . phresh_srt( esc_html__( 'Reply', 'devoted' ) ),
+					'reply_text' => phresh_icon( 'editor-break' ) . phresh_srt( esc_html__( 'Reply', 'phresh' ) ),
 				) ) ); ?>
 			</ol>
 		</div>
@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php if ( ! comments_open() && have_comments() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<div class="comments-closed"><?php esc_html_e( 'Comments are closed.', 'devoted' ); ?></div>
+		<div class="comments-closed"><?php esc_html_e( 'Comments are closed.', 'phresh' ); ?></div>
 	<?php endif; ?>
 
 	<?php comment_form( array(
