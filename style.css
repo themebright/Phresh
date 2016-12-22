@@ -2,7 +2,7 @@
  * Theme Name:  Phresh
  * Theme URI:
  * Author:      Galen Gidman
- * Author URI:  http://galengidman.com/
+ * Author URI:  https://galengidman.com/
  * Description:
  * Version:     1.0.0
  * License:     GNU General Public License v2 or later
@@ -212,6 +212,12 @@ input[type=submit]:hover {
 	// font-family: Montserrat, sans-serif;
 	text-transform: uppercase;
 	transition: .2s;
+}
+
+.sticky-wrapper,
+.site-header {
+	position: relative;
+	z-index: 100;
 }
 
 .sticky-wrapper.is-sticky .site-header-sticky {
@@ -537,6 +543,13 @@ body.site-nav-open .site-nav-toggle .dashicons-menu {
 
 .comment-respond {
 	margin-top: 8rem;
+}
+
+#cancel-comment-reply-link {
+	float: right;
+	line-height: 20px;
+	margin-top: 8px;
+	margin-left: 2rem;
 }
 
 .comment-form-comment,

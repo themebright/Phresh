@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav class="comments-pagination pagination">
-				<?php paginate_comments_links(); ?>
+				<?php phresh_comments_pagination(); ?>
 			</nav>
 		<?php endif; ?>
 	<?php endif; ?>

@@ -73,14 +73,24 @@ function phresh_posts_nav() {
 
 }
 
-function phresh_posts_pagination() {
+function phresh_pagination_arrow_attr() {
 
-	$prev_text =
-
-	the_posts_pagination( array(
+	return array(
 		'prev_text' => phresh_icon( 'arrow-left-alt' ) . phresh_srt( esc_html__( 'Previous', 'devoted' ) ),
 		'next_text' => phresh_srt( esc_html__( 'Next', 'devoted' ) ) . phresh_icon( 'arrow-right-alt' ),
-	) );
+	);
+
+}
+
+function phresh_comments_pagination() {
+
+	paginate_comments_links( phresh_pagination_arrow_attr() );
+
+}
+
+function phresh_posts_pagination() {
+
+	the_posts_pagination( phresh_pagination_arrow_attr() );
 
 }
 

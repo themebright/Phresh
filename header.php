@@ -3,12 +3,11 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php if ( is_singular() && has_post_thumbnail() ) : ?>
 		<?php the_post_thumbnail( 'large', array( 'class' => 'site-header-image' ) ); ?>
 	<?php else : ?>
 		<?php the_header_image_tag( array( 'class' => 'site-header-image' ) ); ?>
