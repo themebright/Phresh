@@ -1,17 +1,32 @@
 <?php
+/**
+ * Template Tags
+ */
 
-function phresh_icon( $icon = 'wordpress', $class = null ) {
+/**
+ * Icon
+ *
+ * @param  string $icon          Icon to display.
+ * @param  array  $extra_classes Array of additional classes to add to the icon markup.
+ * @return string                Class markup.
+ */
+function phresh_icon( $icon = 'wordpress', $extra_classes = [] ) {
 
 	$classes = array( 'dashicons', "dashicons-$icon" );
 
-	if ( $class ) {
-		$classes[] = $class;
+	if ( $extra_classes ) {
+		$classes = array_merge( $classes, $extra_classes );
 	}
 
-	return '<span class="' . implode( ' ', $classes ) . '"></span>';
+	return '<span class="' . join( ' ', $classes ) . '"></span>';
 
 }
 
+/**
+ * Post Meta Above
+ *
+ * Displays all top post meta.
+ */
 function phresh_post_meta_above() {
 
 	?>
@@ -34,6 +49,11 @@ function phresh_post_meta_above() {
 
 }
 
+/**
+ * Post Meta Below
+ *
+ * Displays all bottom post meta.
+ */
 function phresh_post_meta_below() {
 
 	?>
@@ -55,6 +75,11 @@ function phresh_post_meta_below() {
 
 }
 
+/**
+ * Posts Nav
+ *
+ * Displays next and prev posts links (with title).
+ */
 function phresh_posts_nav() {
 
 	?>
@@ -73,6 +98,11 @@ function phresh_posts_nav() {
 
 }
 
+/**
+ * Pagination Arrows
+ *
+ * @return string `prev_text` and `next_text` attributes to add arrows to pagination functions
+ */
 function phresh_pagination_arrow_attr() {
 
 	return array(
@@ -82,20 +112,49 @@ function phresh_pagination_arrow_attr() {
 
 }
 
+/**
+ * Comments Pagination
+ *
+ * Display comments pagination links.
+ */
 function phresh_comments_pagination() {
 
 	paginate_comments_links( phresh_pagination_arrow_attr() );
 
 }
 
+/**
+ * Posts Pagination
+ *
+ * Display posts pagination links.
+ */
 function phresh_posts_pagination() {
 
 	the_posts_pagination( phresh_pagination_arrow_attr() );
 
 }
 
+/**
+ * Screen Reader Text
+ *
+ * @param  string $text Text to wrap in screen reader class.
+ * @return string       Text wrapped in screen reader class.
+ */
 function phresh_srt( $text = '' ) {
 
 	return "<span class='screen-reader-text'>$text</span>";
 
 }
+
+/**
+ * Link Pages
+ *
+ * @param  string $content Post content.
+ * @return string          Post content with link pages markup appended.
+ */
+function phresh_link_pages( $content ) {
+
+	return $content . wp_link_pages( array( 'echo' => false ) );
+
+}
+add_filter( 'the_content', 'phresh_link_pages' );

@@ -33,9 +33,9 @@ gulp.task( 'translate', function() {
 	return gulp.src( '**/*.php' )
 		.pipe( wpPot( {
 			domain: pkg.name,
-			package: 'OpenTable Widget Shortcode',
+			package: 'Phresh',
 		} ) )
-		.pipe( gulp.dest( pkg.name + '/languages/' + pkg.name + '.pot' ) );
+		.pipe( gulp.dest( 'languages/' + pkg.name + '.pot' ) );
 } )
 
 gulp.task( 'copy', [ 'translate' ], function( cb ) {
