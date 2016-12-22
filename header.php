@@ -26,14 +26,22 @@
 				<?php endif; ?>
 
 				<nav class="site-nav">
-					<button class="site-nav-toggle">
-						<?php echo phresh_srt( esc_html__( 'Toggle Menu', 'phresh' ) ) . phresh_icon( 'menu' ) . phresh_icon( 'no' ); ?>
-					</button>
-
 					<?php wp_nav_menu( array(
 						'theme_location' => 'main',
 						'container_class' => 'menu',
 					) ); ?>
+
+					<div class="site-search">
+						<?php get_search_form(); ?>
+					</div>
+
+					<div class="site-search-toggle">
+						<?php echo phresh_srt( esc_html__( 'Toggle Search', 'phresh' ) ) . phresh_icon( 'search' ) . phresh_icon( 'no' ); ?>
+					</div>
+
+					<button class="site-nav-toggle">
+						<?php echo phresh_srt( esc_html__( 'Toggle Menu', 'phresh' ) ) . phresh_icon( 'menu' ) . phresh_icon( 'no' ); ?>
+					</button>
 				</nav>
 			</div>
 		</header>

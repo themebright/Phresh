@@ -2,6 +2,13 @@
    Forms
 ================================================== */
 
+input,
+select,
+textarea,
+button {
+	font-family: inherit;
+}
+
 textarea,
 input[type=email],
 input[type=number],
@@ -31,15 +38,11 @@ input[type=submit] {
 	padding: 1rem 2rem;
 	border: none;
 	background: co(accent);
-	font-family: Montserrat, sans-serif;
 	color: white;
 	text-align: center;
 	cursor: pointer;
-}
 
-// .button:hover,
-// button:hover,
-// input[type=button]:hover,
-// input[type=submit]:hover {
-// 	background: #45b141;
-// }
+	&:hover {
+		opacity: .9;
+	}
+}

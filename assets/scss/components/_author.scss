@@ -1,0 +1,34 @@
+/* ==================================================
+   Author
+================================================== */
+
+.author-box .avatar {
+	float: right;
+	margin: 0 0 1rem 2rem;
+	border-radius: 50%;
+}
+
+body.single .author-box {
+	padding: 4rem 0;
+	margin: 8rem 0;
+	border: solid co(border);
+	border-width: 1px 0;
+}
+
+.author-title {
+	margin-top: 0;
+}
+
+.author-url {
+	font-size: 1.2rem;
+	line-height: 20px;
+	text-transform: uppercase;
+
+	.dashicons {
+		margin-right: .5rem;
+	}
+
+	a:hover {
+		color: inherit;
+	}
+}

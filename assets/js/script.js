@@ -3,6 +3,8 @@ jQuery( function( $ ) {
 	var $window = $( window );
 	var $body = $( 'body' );
 	var $siteNavToggle = $( '.site-nav-toggle' );
+	var $siteSearchToggle = $( '.site-search-toggle' );
+	var $siteSearch = $( '.site-search' );
 	var $siteHeaderSticky = $( '.site-header-sticky' );
 	var $siteHeaderImage = $( '.site-header-image' );
 
@@ -10,6 +12,18 @@ jQuery( function( $ ) {
 
 	$siteNavToggle.on( 'click', function() {
 		$body.toggleClass( 'site-nav-open' );
+	} );
+
+	// ------------------------------------------------------------
+
+	$siteSearchToggle.on( 'click', function() {
+		$body.toggleClass( 'site-search-open' );
+
+		if ( $( 'body' ).hasClass( 'site-search-open' ) ) {
+			setTimeout( function() {
+				$siteSearch.find( 'input[type="search"]' ).focus();
+			}, 50 );
+		}
 	} );
 
 	// ------------------------------------------------------------

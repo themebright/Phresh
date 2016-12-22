@@ -510,6 +510,12 @@ figure {
 /* ==================================================
    Forms
 ================================================== */
+input,
+select,
+textarea,
+button {
+  font-family: inherit; }
+
 textarea,
 input[type=email],
 input[type=number],
@@ -539,10 +545,14 @@ input[type=submit] {
   padding: 1rem 2rem;
   border: none;
   background: #69c5e4;
-  font-family: Montserrat, sans-serif;
   color: white;
   text-align: center;
   cursor: pointer; }
+  .button:hover,
+  button:hover,
+  input[type=button]:hover,
+  input[type=submit]:hover {
+    opacity: .9; }
 
 /* ==================================================
    Wrap
@@ -592,6 +602,17 @@ input[type=submit] {
   transition: .2s; }
   .site-header a:hover {
     color: #222; }
+  .site-header .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
 .sticky-wrapper,
 .site-header {
@@ -600,18 +621,6 @@ input[type=submit] {
 
 .sticky-wrapper.is-sticky .site-header-sticky {
   box-shadow: 0 0 20rem rgba(0, 0, 0, 0.125); }
-
-.site-header .wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
 
 .site-title {
   margin: 0;
@@ -622,19 +631,54 @@ input[type=submit] {
   font-weight: normal;
   font-size: 1.2rem; }
 
+.site-nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .site-nav .menu {
+    -webkit-transition: .2s;
+    transition: .2s; }
+
+.site-search-toggle,
 .site-nav-toggle {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 1rem;
   background: transparent;
   line-height: 20px;
   color: #222; }
 
-button.site-nav-toggle {
+button.site-nav-toggle,
+button.site-search-toggle {
   background: transparent; }
 
 body:not(.site-nav-open) .site-nav-toggle .dashicons-no,
-body.site-nav-open .site-nav-toggle .dashicons-menu {
+body.site-nav-open .site-nav-toggle .dashicons-menu,
+body:not(.site-search-open) .site-search-toggle .dashicons-no,
+body.site-search-open .site-search-toggle .dashicons-search {
   display: none; }
+
+.site-search {
+  position: absolute;
+  right: 0;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .site-search input[type=search] {
+    height: 4rem;
+    padding-right: 4rem; }
+  .site-search input[type=submit] {
+    display: none; }
+
+.site-search-toggle {
+  position: relative;
+  z-index: 1; }
+
+body:not(.site-search-open) .site-search {
+  opacity: 0;
+  visibility: hidden; }
+
+body.site-search-open .site-nav .menu {
+  opacity: 0;
+  visibility: hidden; }
 
 @media screen and (max-width: 767px) {
   .site-nav .menu {
@@ -782,13 +826,41 @@ body.site-nav-open .site-nav-toggle .dashicons-menu {
   border-top: solid 1px #ddd; }
 
 /* ==================================================
-   Archive
+   Author
 ================================================== */
-.archive-title {
+.author-box .avatar {
+  float: right;
+  margin: 0 0 1rem 2rem;
+  border-radius: 50%; }
+
+body.single .author-box {
+  padding: 4rem 0;
+  margin: 8rem 0;
+  border: solid #ddd;
+  border-width: 1px 0; }
+
+.author-title {
   margin-top: 0; }
 
-.archive-rule {
-  margin: 4rem 0 8rem; }
+.author-url {
+  font-size: 1.2rem;
+  line-height: 20px;
+  text-transform: uppercase; }
+  .author-url .dashicons {
+    margin-right: .5rem; }
+  .author-url a:hover {
+    color: inherit; }
+
+/* ==================================================
+   Archive
+================================================== */
+.archive-header {
+  padding-bottom: 4rem;
+  margin-bottom: 8rem;
+  border-bottom: solid 1px #ddd; }
+
+.archive-title {
+  margin-top: 0; }
 
 /* ==================================================
    Entry
