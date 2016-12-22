@@ -5,8 +5,8 @@
 .posts-nav {
 	margin-top: 8rem;
 
-	a {
-		@include underline();
+	a:hover {
+		color: co(text, dark);
 	}
 }
 

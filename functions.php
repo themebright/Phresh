@@ -71,7 +71,7 @@ function phresh_assets() {
 	wp_enqueue_style( 'phresh-fonts', 'https://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Montserrat:400,700|Karla:400,700|Libre+Franklin:300,400,700' );
 
 	// Main theme style
-	wp_enqueue_style( 'phresh', esc_url( get_stylesheet_uri() ), array( 'phresh-fonts', 'normalize', 'dashicons' ) );
+	wp_enqueue_style( 'phresh', esc_url( get_stylesheet_uri() ), array( 'phresh-fonts', 'dashicons' ) );
 
 	// Only enqueue sticky plugin if we're using it - TODO
 	wp_enqueue_script( 'sticky', esc_url( get_template_directory_uri() . '/assets/vendor/sticky.js' ), array( 'jquery' ), false, true );

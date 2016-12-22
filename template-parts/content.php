@@ -1,6 +1,4 @@
 <article <?php post_class( 'entry entry-content' ); ?>>
-	<?php // the_post_thumbnail( 'large', array( 'class' => 'entry-thumb' ) ); ?>
-
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_the_permalink() ) . '">', '</a></h1>' ); ?>
 		<?php phresh_post_meta_above(); ?>
