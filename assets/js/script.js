@@ -5,7 +5,6 @@ jQuery( function( $ ) {
 	var $siteNavToggle = $( '.site-nav-toggle' );
 	var $siteSearchToggle = $( '.site-search-toggle' );
 	var $siteSearch = $( '.site-search' );
-	var $siteHeaderSticky = $( '.site-header-sticky' );
 	var $siteHeaderImage = $( '.site-header-image' );
 
 	// ------------------------------------------------------------
@@ -25,12 +24,6 @@ jQuery( function( $ ) {
 			}, 50 );
 		}
 	} );
-
-	// ------------------------------------------------------------
-
-	if ( $siteHeaderSticky.length ) {
-		$siteHeaderSticky.sticky();
-	}
 
 	// ------------------------------------------------------------
 

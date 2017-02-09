@@ -67,17 +67,11 @@ add_action( 'after_setup_theme', 'phresh_setup' );
  */
 function phresh_assets() {
 
-	// Webfonts
-	wp_enqueue_style( 'phresh-fonts', 'https://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Montserrat:400,700|Karla:400,700|Libre+Franklin:300,400,700' );
-
 	// Main theme style
-	wp_enqueue_style( 'phresh', esc_url( get_stylesheet_uri() ), array( 'phresh-fonts', 'dashicons' ) );
-
-	// Only enqueue sticky plugin if we're using it - TODO
-	wp_enqueue_script( 'sticky', esc_url( get_template_directory_uri() . '/assets/vendor/sticky.js' ), array( 'jquery' ), false, true );
+	wp_enqueue_style( 'phresh', esc_url( get_stylesheet_uri() ), array( 'dashicons' ) );
 
 	// Main theme script
-	wp_enqueue_script( 'phresh', esc_url( get_template_directory_uri() . '/assets/js/script.js' ), array( 'jquery', 'sticky' ), false, true );
+	wp_enqueue_script( 'phresh', esc_url( get_template_directory_uri() . '/assets/js/script.js' ), array( 'jquery' ), '', true );
 
 	// Only enqueue comment reply script where it will actually be needed
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

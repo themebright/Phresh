@@ -1,6 +1,6 @@
-/* ==================================================
-   WordPress classes
-================================================== */
+/**
+ * WordPress
+ */
 
 .alignnone {
 	margin-top: 1em;
@@ -45,4 +45,8 @@
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+}
+
+input.adminbar-input {
+	display: inline-block;
 }

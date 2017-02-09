@@ -1,0 +1,11 @@
+/**
+ * Separator
+ */
+
+.sep:before {
+	content: '/';
+	margin-right: .5em;
+	margin-left: .5em;
+	font-weight: normal;
+	color: co(border);
+}
