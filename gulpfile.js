@@ -14,7 +14,7 @@ var pkg = JSON.parse( fs.readFileSync( 'package.json' ) );
 // ------------------------------------------------------------
 
 gulp.task( 'css', function() {
-	return gulp.src( 'assets/scss/style.scss' )
+	return gulp.src( 'assets/scss/*.scss' )
 		.pipe( plumber() )
 		.pipe( sass.sync() )
 		.pipe( postcss( [ autoprefixer() ] ) )

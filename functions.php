@@ -57,6 +57,9 @@ function phresh_setup() {
 	// Automatic title tag
 	add_theme_support( 'title-tag' );
 
+	// Add editor style
+	add_editor_style( 'editor.css' );
+
 }
 add_action( 'after_setup_theme', 'phresh_setup' );
 
