@@ -2,10 +2,10 @@
  * Author
  */
 
-.author-box .avatar {
-	float: right;
-	margin: 0 0 1rem 2rem;
-	border-radius: 50%;
+.author-box {
+	.avatar {
+		border-radius: 50%;
+	}
 }
 
 body.single .author-box {
@@ -15,8 +15,12 @@ body.single .author-box {
 	border-width: 1px 0;
 }
 
+.author-box-content > *:last-child {
+	margin-bottom: 0;
+}
+
 .author-title {
-	margin-top: 0;
+	margin: 0;
 }
 
 .author-url {
@@ -26,5 +30,22 @@ body.single .author-box {
 
 	.dashicons {
 		margin-right: .5rem;
+	}
+}
+
+@media (min-width: 640px) {
+	.author-box {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+
+		.avatar {
+			align-self: flex-start;
+			margin-left: 2rem;
+		}
+	}
+
+	.author-box-content {
+		flex-grow: 1;
 	}
 }

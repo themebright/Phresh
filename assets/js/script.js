@@ -3,7 +3,6 @@ jQuery( function( $ ) {
 	var $window = $( window );
 	var $body = $( 'body' );
 	var $siteHeaderImage = $( '.site-header-image' );
-	var $navItemParent = $( '.menu-item-has-children' );
 
 	// ------------------------------------------------------------
 
@@ -42,7 +41,7 @@ jQuery( function( $ ) {
 
 	// ------------------------------------------------------------
 
-	$navItemParent.append( function() {
+	$( '.site-header .menu-item-has-children' ).append( function() {
 
 		var expandMarkup = [];
 

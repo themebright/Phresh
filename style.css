@@ -8,7 +8,7 @@
  * Version:     1.0.0
  * License:     GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Tags:        one-column, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, footer-widgets, sticky-post, theme-options, threaded-comments, translation-ready, blog
+ * Tags:        one-column, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, sticky-post, theme-options, threaded-comments, translation-ready, blog
  * Text Domain: phresh
  */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -827,8 +827,6 @@ body.-nav-open .site-nav-toggle .dashicons-menu {
  * Author
  */
 .author-box .avatar {
-  float: right;
-  margin: 0 0 1rem 2rem;
   border-radius: 50%; }
 
 body.single .author-box {
@@ -837,8 +835,11 @@ body.single .author-box {
   border: solid #ddd;
   border-width: 1px 0; }
 
+.author-box-content > *:last-child {
+  margin-bottom: 0; }
+
 .author-title {
-  margin-top: 0; }
+  margin: 0; }
 
 .author-url {
   font-size: 1.2rem;
@@ -846,6 +847,27 @@ body.single .author-box {
   text-transform: uppercase; }
   .author-url .dashicons {
     margin-right: .5rem; }
+
+@media (min-width: 640px) {
+  .author-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .author-box .avatar {
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      margin-left: 2rem; }
+  .author-box-content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; } }
 
 /**
  * Archive
