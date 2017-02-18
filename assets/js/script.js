@@ -2,28 +2,8 @@ jQuery( function( $ ) {
 
 	var $window = $( window );
 	var $body = $( 'body' );
-	var $siteNavToggle = $( '.site-nav-toggle' );
-	var $siteSearchToggle = $( '.site-search-toggle' );
-	var $siteSearch = $( '.site-search' );
 	var $siteHeaderImage = $( '.site-header-image' );
-
-	// ------------------------------------------------------------
-
-	$siteNavToggle.on( 'click', function() {
-		$body.toggleClass( 'site-nav-open' );
-	} );
-
-	// ------------------------------------------------------------
-
-	$siteSearchToggle.on( 'click', function() {
-		$body.toggleClass( 'site-search-open' );
-
-		if ( $( 'body' ).hasClass( 'site-search-open' ) ) {
-			setTimeout( function() {
-				$siteSearch.find( 'input[type="search"]' ).focus();
-			}, 50 );
-		}
-	} );
+	var $navItemParent = $( '.menu-item-has-children' );
 
 	// ------------------------------------------------------------
 
@@ -33,7 +13,8 @@ jQuery( function( $ ) {
 		.addClass( 'site-header-image-clone' );
 
 	var caclHeaderImageCloneSize = function() {
-		$siteHeaderImageClone.css( 'margin-top', -Math.abs( $siteHeaderImage.height() ) );
+		var margin = Math.abs( $siteHeaderImage.height() );
+		$siteHeaderImageClone.css( 'margin-top', -margin );
 	};
 
 	if ( $siteHeaderImageClone.length ) {
@@ -43,6 +24,37 @@ jQuery( function( $ ) {
 
 	$window.resize( function() {
 		caclHeaderImageCloneSize();
+	} );
+
+	// ------------------------------------------------------------
+
+	$body.on( 'click', '.site-nav-toggle', function() {
+
+		var $this = $( this );
+
+		if ( $this.parent( 'li' ).length ) {
+			$this.parent().toggleClass( '-open' );
+		} else {
+			$body.toggleClass( '-nav-open' );
+		}
+
+	} );
+
+	// ------------------------------------------------------------
+
+	$navItemParent.append( function() {
+
+		var expandMarkup = [];
+
+		expandMarkup.push( '<button class="site-nav-toggle">' );
+		expandMarkup.push( '<span class="dashicons dashicons-arrow-up-alt2"></span>' );
+		expandMarkup.push( '<span class="screen-reader-text">' );
+		expandMarkup.push( phresh_i18n.expand );
+		expandMarkup.push( '</span>' );
+		expandMarkup.push( '</button>' );
+
+		return expandMarkup.join( '' );
+
 	} );
 
 } );

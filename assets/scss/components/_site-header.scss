@@ -60,14 +60,11 @@
 	background: transparent;
 	line-height: 20px;
 	color: co(text, dark);
+	transition: .2s;
 }
 
-button.site-nav-toggle {
-	background: transparent;
-}
-
-body:not(.site-nav-open) .site-nav-toggle .dashicons-no,
-body.site-nav-open .site-nav-toggle .dashicons-menu {
+body:not(.-nav-open) .site-nav-toggle .dashicons-no,
+body.-nav-open .site-nav-toggle .dashicons-menu {
 	display: none;
 }
 
@@ -82,6 +79,12 @@ body.site-nav-open .site-nav-toggle .dashicons-menu {
 
 	li {
 		position: relative;
+
+		.site-nav-toggle {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 	}
 
 	a {
@@ -98,14 +101,24 @@ body.site-nav-open .site-nav-toggle .dashicons-menu {
 		width: 100%;
 		margin-top: 2rem;
 
-		ul ul {
-			a:before {
-				@include icon('\F345');
-				color: co(border);
+		.menu > ul li:not(.-open) {
+			> ul {
+				display: none;
 			}
 
+			> .site-nav-toggle {
+				transform: rotateX(180deg);
+			}
+		}
+
+		ul ul {
 			ul {
 				margin-left: 20px;
+			}
+
+			a:before {
+				@include icon('\f139');
+				color: co(border);
 			}
 		}
 
@@ -118,7 +131,7 @@ body.site-nav-open .site-nav-toggle .dashicons-menu {
 		}
 	}
 
-	body:not(.site-nav-open) .site-nav {
+	body:not(.-nav-open) .site-nav {
 		display: none;
 	}
 }

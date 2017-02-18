@@ -81,6 +81,11 @@ function phresh_assets() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+	// i18n labels
+	wp_localize_script( 'phresh', 'phresh_i18n', array(
+		'expand' => esc_html__( 'Expand', 'phresh' ),
+	) );
+
 }
 add_action( 'wp_enqueue_scripts', 'phresh_assets' );
 

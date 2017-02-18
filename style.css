@@ -638,13 +638,12 @@ input[type=submit] {
   padding: 1rem;
   background: transparent;
   line-height: 20px;
-  color: #222; }
+  color: #222;
+  -webkit-transition: .2s;
+  transition: .2s; }
 
-button.site-nav-toggle {
-  background: transparent; }
-
-body:not(.site-nav-open) .site-nav-toggle .dashicons-no,
-body.site-nav-open .site-nav-toggle .dashicons-menu {
+body:not(.-nav-open) .site-nav-toggle .dashicons-no,
+body.-nav-open .site-nav-toggle .dashicons-menu {
   display: none; }
 
 .site-nav {
@@ -655,6 +654,10 @@ body.site-nav-open .site-nav-toggle .dashicons-menu {
     list-style: none; }
   .site-nav li {
     position: relative; }
+    .site-nav li .site-nav-toggle {
+      position: absolute;
+      top: 0;
+      right: 0; }
   .site-nav a {
     display: block; }
     .site-nav a:not(:hover) {
@@ -664,8 +667,15 @@ body.site-nav-open .site-nav-toggle .dashicons-menu {
   .site-nav {
     width: 100%;
     margin-top: 2rem; }
+    .site-nav .menu > ul li:not(.-open) > ul {
+      display: none; }
+    .site-nav .menu > ul li:not(.-open) > .site-nav-toggle {
+      -webkit-transform: rotateX(180deg);
+              transform: rotateX(180deg); }
+    .site-nav ul ul ul {
+      margin-left: 20px; }
     .site-nav ul ul a:before {
-      content: "";
+      content: "";
       display: inline-block;
       width: 20px;
       height: 20px;
@@ -680,13 +690,11 @@ body.site-nav-open .site-nav-toggle .dashicons-menu {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       color: #ddd; }
-    .site-nav ul ul ul {
-      margin-left: 20px; }
     .site-nav li {
       border-top: solid 1px #ddd; }
     .site-nav a {
       padding: 1rem .5rem; }
-  body:not(.site-nav-open) .site-nav {
+  body:not(.-nav-open) .site-nav {
     display: none; } }
 
 @media screen and (min-width: 960px) {
