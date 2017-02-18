@@ -26,10 +26,6 @@
 	transition: .2s;
 	z-index: zi(header);
 
-	a:hover {
-		color: co(text, dark);
-	}
-
  	.wrap {
 		display: flex;
 		flex-wrap: wrap;

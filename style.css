@@ -439,6 +439,8 @@ a {
   text-decoration: none;
   -webkit-transition: .2s;
   transition: .2s; }
+  a:hover {
+    color: #222; }
 
 h1,
 h2,
@@ -534,7 +536,7 @@ input[type=url] {
   padding: 1rem;
   background: white;
   border: solid 1px #ddd;
-  color: #ddd; }
+  color: #666; }
 
 select {
   display: block; }
@@ -604,8 +606,6 @@ input[type=submit] {
   -webkit-transition: .2s;
   transition: .2s;
   z-index: 100; }
-  .site-header a:hover {
-    color: #222; }
   .site-header .wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -845,8 +845,6 @@ body.single .author-box {
   text-transform: uppercase; }
   .author-url .dashicons {
     margin-right: .5rem; }
-  .author-url a:hover {
-    color: inherit; }
 
 /**
  * Archive
@@ -946,8 +944,6 @@ input.adminbar-input {
  */
 .posts-nav {
   margin-top: 8rem; }
-  .posts-nav a:hover {
-    color: #222; }
 
 .posts-nav .dashicons {
   margin-top: .2rem; }
@@ -1034,9 +1030,6 @@ input.adminbar-input {
 
 .comment-author a {
   font-weight: bold; }
-
-.comment-author a:not(:hover) {
-  color: inherit; }
 
 .comment-author .avatar {
   display: block;

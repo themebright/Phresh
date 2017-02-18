@@ -426,6 +426,8 @@ a {
   text-decoration: none;
   -webkit-transition: .2s;
   transition: .2s; }
+  a:hover {
+    color: #222; }
 
 h1,
 h2,
@@ -521,7 +523,7 @@ input[type=url] {
   padding: 1rem;
   background: white;
   border: solid 1px #ddd;
-  color: #ddd; }
+  color: #666; }
 
 select {
   display: block; }

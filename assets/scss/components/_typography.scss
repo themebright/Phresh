@@ -16,6 +16,10 @@ a {
 	color: co(accent);
 	text-decoration: none;
 	transition: .2s;
+
+	&:hover {
+		color: co(text, dark);
+	}
 }
 
 h1,
