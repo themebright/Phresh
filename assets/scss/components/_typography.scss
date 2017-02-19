@@ -7,7 +7,7 @@ html {
 }
 
 body {
-	font: 300 1.8rem/1.6 ff(primary);
+	font: 300 1.6rem/1.6 ff(primary);
 	color: co(text);
 	background: white;
 }
@@ -77,4 +77,10 @@ strong {
 hr {
 	border: solid co(border);
 	border-width: 1px 0 0;
+}
+
+@media (min-width: 960px) {
+	body {
+		font-size: 1.8rem;
+	}
 }

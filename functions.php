@@ -29,6 +29,9 @@ function phresh_setup() {
 	 * Add theme support
 	 */
 
+	// Jetpack Social Menu
+	add_theme_support( 'jetpack-social-menu' );
+
 	// Automatic feed links
 	add_theme_support( 'automatic-feed-links' );
 

@@ -158,3 +158,16 @@ function phresh_link_pages( $content ) {
 
 }
 add_filter( 'the_content', 'phresh_link_pages' );
+
+/**
+ * Jetpack Social Menu
+ *
+ * Displays the Jetpack social menu if it is available.
+ */
+function phresh_social_menu() {
+
+	if ( function_exists( 'jetpack_social_menu' ) ) {
+		jetpack_social_menu();
+	}
+
+}
