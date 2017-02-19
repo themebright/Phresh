@@ -541,6 +541,16 @@ input[type=url] {
   background: white;
   border: solid 1px #ddd;
   color: #666; }
+  textarea:focus,
+  input[type=email]:focus,
+  input[type=number]:focus,
+  input[type=password]:focus,
+  input[type=search]:focus,
+  input[type=tel]:focus,
+  input[type=text]:focus,
+  input[type=url]:focus {
+    outline: none;
+    border-color: #69c5e4; }
 
 select {
   display: block; }
@@ -825,14 +835,49 @@ body.-nav-open .site-nav-toggle .dashicons-menu {
 .site-footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  border-top: solid 1px #ddd;
-  font-size: .8em;
-  color: #aaa;
-  text-align: center; }
+  border-top: solid 1px #ddd; }
   .site-footer a {
     color: inherit; }
     .site-footer a:hover {
       color: #666; }
+
+.site-footer-widgets {
+  margin: 4rem 0 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.site-footer-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+  color: #aaa;
+  text-align: center;
+  text-transform: uppercase; }
+
+@media (min-width: 640px) {
+  .site-footer-column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    width: 0;
+    min-width: 50%; }
+    .site-footer-column + .site-footer-column {
+      margin-left: 4rem; } }
+
+@media (min-width: 960px) {
+  .site-footer-column {
+    min-width: 30%; } }
 
 /**
  * Author
@@ -1136,9 +1181,13 @@ input.adminbar-input {
 /**
  * Jetpack
  */
-.jetpack-social-navigation li a {
-  height: auto;
-  padding: 1rem; }
+.jetpack-social-navigation {
+  font-size: 16px; }
+  .jetpack-social-navigation ul {
+    margin: 1em 0 !important; }
+  .jetpack-social-navigation a {
+    height: auto !important;
+    padding: 1rem; }
 
 /**
  * Search Form
@@ -1149,3 +1198,30 @@ input.adminbar-input {
   display: flex; }
   .search-form input {
     border-right: none; }
+  .search-form button {
+    padding: 1rem 1.5rem; }
+
+/**
+ * Widget
+ */
+.widget {
+  font-size: 1.6rem;
+  color: #aaa; }
+  .widget ul,
+  .widget ol {
+    padding-left: 0;
+    list-style: none; }
+    .widget ul ul,
+    .widget ul ol,
+    .widget ol ul,
+    .widget ol ol {
+      font-size: 1.4rem;
+      padding-left: 2rem; }
+  .widget li {
+    margin-top: .5em; }
+  .widget a {
+    color: #666; }
+    .widget a:hover {
+      color: #222; }
+  .widget + .widget {
+    margin-top: 4rem; }

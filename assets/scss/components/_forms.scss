@@ -23,6 +23,11 @@ input[type=url] {
 	background: white;
 	border: solid 1px co(border);
 	color: co(text);
+
+	&:focus {
+		outline: none;
+		border-color: co(accent);
+	}
 }
 
 select {

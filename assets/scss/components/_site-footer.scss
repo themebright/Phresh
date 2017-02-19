@@ -6,9 +6,6 @@
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 	border-top: solid 1px co(border);
-	font-size: .8em;
-	color: co(text, light);
-	text-align: center;
 
 	a {
 		color: inherit;
@@ -16,5 +13,39 @@
 		&:hover {
 			color: co(text);
 		}
+	}
+}
+
+.site-footer-widgets {
+	margin: 4rem 0 8rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.site-footer-meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.3rem;
+	color: co(text, light);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+	.site-footer-column {
+		flex: 1 0 auto;
+		width: 0;
+		min-width: 50%;
+
+		+ .site-footer-column {
+			margin-left: 4rem;
+		}
+	}
+}
+
+@media (min-width: 960px) {
+	.site-footer-column {
+		min-width: 30%;
 	}
 }

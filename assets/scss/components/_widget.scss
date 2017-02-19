@@ -1,0 +1,36 @@
+/**
+ * Widget
+ */
+
+.widget {
+	font-size: 1.6rem;
+	color: co(text, light);
+
+	ul,
+	ol {
+		padding-left: 0;
+		list-style: none;
+
+		ul,
+		ol {
+			font-size: 1.4rem;
+			padding-left: 2rem;
+		}
+	}
+
+	li {
+		margin-top: .5em;
+	}
+
+	a {
+		color: co(text);
+
+		&:hover {
+			color: co(text, dark);
+		}
+	}
+
+	+ .widget {
+		margin-top: 4rem;
+	}
+}

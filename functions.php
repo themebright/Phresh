@@ -93,6 +93,28 @@ function phresh_assets() {
 add_action( 'wp_enqueue_scripts', 'phresh_assets' );
 
 /**
+ * Widget Areas
+ */
+function phresh_widgets() {
+
+	$shared_config = array(
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	);
+
+	for ( $i = 1; $i <= 3; $i++ ) {
+		register_sidebar( array_merge( $shared_config, array(
+			'name' => sprintf( esc_html_x( 'Footer %d', 'footer widget title', 'phresh' ), $i ),
+			'id' => "footer-$i",
+		) ) );
+	}
+
+}
+add_action( 'widgets_init', 'phresh_widgets' );
+
+/**
  * Includes
  */
 include get_template_directory() . '/includes/template-tags.php';

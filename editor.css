@@ -528,6 +528,16 @@ input[type=url] {
   background: white;
   border: solid 1px #ddd;
   color: #666; }
+  textarea:focus,
+  input[type=email]:focus,
+  input[type=number]:focus,
+  input[type=password]:focus,
+  input[type=search]:focus,
+  input[type=tel]:focus,
+  input[type=text]:focus,
+  input[type=url]:focus {
+    outline: none;
+    border-color: #69c5e4; }
 
 select {
   display: block; }
