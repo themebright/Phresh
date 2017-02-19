@@ -821,7 +821,14 @@ body.-nav-open .site-nav-toggle .dashicons-menu {
 .site-footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  border-top: solid 1px #ddd; }
+  border-top: solid 1px #ddd;
+  font-size: .9em;
+  color: #aaa;
+  text-align: center; }
+  .site-footer a {
+    color: inherit; }
+    .site-footer a:hover {
+      color: #666; }
 
 /**
  * Author
@@ -834,12 +841,6 @@ body.single .author-box {
   margin: 8rem 0;
   border: solid #ddd;
   border-width: 1px 0; }
-
-.author-box-content > *:last-child {
-  margin-bottom: 0; }
-
-.author-title {
-  margin: 0; }
 
 .author-url {
   font-size: 1.2rem;
@@ -1123,8 +1124,7 @@ input.adminbar-input {
  * Separator
  */
 .sep:before {
-  content: '/';
+  content: '×';
   margin-right: .5em;
   margin-left: .5em;
-  font-weight: normal;
   color: #ddd; }
