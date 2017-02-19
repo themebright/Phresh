@@ -955,13 +955,8 @@ body.single .author-box {
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: absolute;
-  top: 50%;
-  width: 3rem;
-  margin: -10px 0 0 -3rem;
-  margin-left: -3rem;
-  color: #69c5e4;
-  text-align: left; }
+  display: block;
+  color: #69c5e4; }
 
 .entry-title {
   position: relative;
@@ -996,6 +991,14 @@ body.single .author-box {
     color: inherit; }
     .entry-footer a:hover {
       color: #666; }
+
+@media (min-width: 960px) {
+  .entry.sticky .entry-title:before {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    margin: -10px 0 0 -40px;
+    text-align: left; } }
 
 /**
  * WordPress

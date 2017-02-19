@@ -9,13 +9,8 @@
 
 	&.sticky .entry-title:before {
 		@include icon('\f537');
-		position: absolute;
-		top: 50%;
-		width: 3rem;
-		margin: -10px 0 0 -3rem;
-		margin-left: -3rem;
+		display: block;
 		color: co(accent);
-		text-align: left;
 	}
 }
 
@@ -58,5 +53,15 @@
 		&:hover {
 			color: co(text);
 		}
+	}
+}
+
+@media (min-width: 960px) {
+	.entry.sticky .entry-title:before {
+		position: absolute;
+		top: 50%;
+		width: 40px;
+		margin: -10px 0 0 -40px;
+		text-align: left;
 	}
 }
