@@ -815,10 +815,14 @@ body.-nav-open .site-nav-toggle .dashicons-menu {
       border-bottom: solid 10px transparent; } }
 
 @media screen and (min-width: 601px) and (max-width: 782px) {
+  body.admin-bar .site-header-image {
+    max-height: calc(100vh - 8rem - 46px); }
   body.admin-bar .site-header-sticky {
     top: 46px; } }
 
 @media screen and (min-width: 783px) {
+  body.admin-bar .site-header-image {
+    max-height: calc(100vh - 8rem - 32px); }
   body.admin-bar .site-header-sticky {
     top: 32px; } }
 
