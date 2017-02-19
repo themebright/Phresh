@@ -2,11 +2,25 @@
  * Entry
  */
 
-.entry + .entry {
-	margin-top: 8rem;
+.entry {
+	+ .entry {
+		margin-top: 8rem;
+	}
+
+	&.sticky .entry-title:before {
+		@include icon('\f537');
+		position: absolute;
+		top: 50%;
+		width: 3rem;
+		margin: -10px 0 0 -3rem;
+		margin-left: -3rem;
+		color: co(accent);
+		text-align: left;
+	}
 }
 
 .entry-title {
+	position: relative;
 	margin: 0;
 }
 

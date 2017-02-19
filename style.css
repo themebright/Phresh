@@ -940,7 +940,31 @@ body.single .author-box {
 .entry + .entry {
   margin-top: 8rem; }
 
+.entry.sticky .entry-title:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: normal;
+  font-style: normal;
+  vertical-align: top;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  margin: -10px 0 0 -3rem;
+  margin-left: -3rem;
+  color: #69c5e4;
+  text-align: left; }
+
 .entry-title {
+  position: relative;
   margin: 0; }
 
 .entry-meta {
