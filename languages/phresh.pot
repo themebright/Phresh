@@ -1,4 +1,4 @@
-# Copyright (C) 2016 Phresh
+# Copyright (C) 2017 Phresh
 # This file is distributed under the same license as the Phresh package.
 msgid ""
 msgstr ""
@@ -13,7 +13,15 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: archive.php:19, index.php:15, singular.php:12
+#: 404.php:10
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:14
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: archive.php:24, index.php:15, page.php:11, search.php:23, single.php:13
 msgid "Sorry, nothing found."
 msgstr ""
 
@@ -29,28 +37,76 @@ msgstr ""
 msgid "Cancel Reply"
 msgstr ""
 
-#: functions.php:10
+#: footer.php:23
+msgid "&copy; %1$d %2$s"
+msgstr ""
+
+#: footer.php:25
+msgid "Theme designed by ThemeBright"
+msgstr ""
+
+#: functions.php:26
 msgid "Main Menu"
 msgstr ""
 
-#: header.php:30
+#: functions.php:95
+msgid "Expand"
+msgstr ""
+
+#: functions.php:115
+msgctxt "footer widget title"
+msgid "Footer %d"
+msgstr ""
+
+#: header.php:29
 msgid "Toggle Menu"
 msgstr ""
 
-#: includes/template-tags.php:42
+#: search.php:12
+msgid "Search: &ldquo;%s&rdquo;"
+msgstr ""
+
+#: search.php:13
+msgid "%d results found."
+msgstr ""
+
+#: searchform.php:3
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:4
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:9
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: includes/customizer.php:19
+msgid "Accent color"
+msgstr ""
+
+#: includes/template-tags.php:62
 msgid "Filed under %s"
 msgstr ""
 
-#: includes/template-tags.php:51
+#: includes/template-tags.php:71
 msgid "Tagged "
 msgstr ""
 
-#: includes/template-tags.php:79
+#: includes/template-tags.php:109
 msgid "Previous"
 msgstr ""
 
-#: includes/template-tags.php:80
+#: includes/template-tags.php:110
 msgid "Next"
+msgstr ""
+
+#: template-parts/author.php:15
+msgid "Website"
 msgstr ""
 
 #: template-parts/excerpt.php:10

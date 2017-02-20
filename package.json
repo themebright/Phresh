@@ -11,6 +11,6 @@
     "gulp-sass": "^3.0.0",
     "gulp-shell": "^0.5.2",
     "gulp-wp-pot": "^2.0.1",
-    "gulp-zip": "^3.2.0"
+    "gulp-zip": "^4.0.0"
   }
 }
