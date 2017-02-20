@@ -123,4 +123,5 @@ add_action( 'widgets_init', 'phresh_widgets' );
 /**
  * Includes
  */
+include get_template_directory() . '/includes/customizer.php';
 include get_template_directory() . '/includes/template-tags.php';
