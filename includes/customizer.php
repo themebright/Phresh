@@ -34,6 +34,7 @@ function phresh_customizer_styles() {
 		<?php if ( get_theme_mod( 'color_accent' ) ) : $color = esc_html( get_theme_mod( 'color_accent' ) ); ?>
 			a,
 			blockquote,
+			.comment.bypostauthor .comment-author:before,
 			.entry.sticky .entry-title:before {
 				color: <?php echo $color; ?>;
 			}

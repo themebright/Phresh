@@ -1190,6 +1190,28 @@ input.adminbar-input {
   margin-top: 4rem;
   padding-top: 4rem;
   border-top: solid 1px #ddd; }
+  .comment.bypostauthor .comment-author:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 1;
+    font-family: dashicons;
+    text-decoration: inherit;
+    font-weight: normal;
+    font-style: normal;
+    vertical-align: top;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 5.5rem;
+    left: -6rem;
+    background: white;
+    border-radius: 50%;
+    color: #69c5e4;
+    box-shadow: 0 0 0 3px white; }
 
 .comment-body {
   position: relative; }
@@ -1230,10 +1252,10 @@ input.adminbar-input {
   .comment-meta {
     line-height: 3rem; }
   .comment {
-    padding-left: 10rem; }
+    padding-left: 8rem; }
   .comment-author .avatar {
     float: left;
-    margin-left: -10rem; } }
+    margin-left: -8rem; } }
 
 /**
  * Comment Form
