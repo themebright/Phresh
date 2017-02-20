@@ -5,7 +5,7 @@
 	</header>
 
 	<div class="entry-main">
-		<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'entry-thumb' ) ); ?>
+		<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'entry-thumb alignright' ) ); ?>
 		<?php the_excerpt(); ?>
 		<p><a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php esc_html_e( 'Read More', 'phresh' ); ?></a></p>
 	</div>

@@ -69,6 +69,20 @@ dd + dt {
 	margin-top: .5em;
 }
 
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	tab-size: 4;
+	font: 1.4rem/1.3 ff(mono);
+}
+
+code,
+var,
+kbd,
+tt {
+	font: 1.4rem ff(mono);
+}
+
 b,
 strong {
 	font-weight: bold;
