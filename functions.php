@@ -43,7 +43,13 @@ function phresh_setup() {
 	) );
 
 	// Custom logo
-	add_theme_support( 'custom-logo' );
+	add_theme_support( 'custom-logo', array(
+		'height' => 80,
+		'width' => 200,
+		'flex-height' => true,
+		'flex-width' => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	) );
 
 	// HTML5 markup
 	add_theme_support( 'html5', array(

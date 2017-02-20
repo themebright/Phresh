@@ -40,6 +40,19 @@
 	top: 0;
 }
 
+.site-branding {
+	display: flex;
+
+	.custom-logo {
+		display: block;
+		width: auto;
+		height: auto;
+		max-width: 240px;
+		max-height: 40px;
+		margin-right: 2rem;
+	}
+}
+
 .site-title {
 	margin: 0;
 	font-size: 2rem;

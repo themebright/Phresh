@@ -16,14 +16,14 @@
 	<div class="site-wrap">
 		<header class="site-header site-header-sticky">
 			<div class="wrap">
-				<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
-					<?php the_custom_logo(); ?>
-				<?php else : ?>
-					<div class="site-branding">
+				<div class="site-branding">
+					<?php if ( function_exists( 'the_custom_logo' ) ) the_custom_logo(); ?>
+
+					<div>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 						<h4 class="site-description"><?php bloginfo( 'description' ); ?></h4>
 					</div>
-				<?php endif; ?>
+				</div>
 
 				<button class="site-nav-toggle">
 					<?php echo phresh_srt( esc_html__( 'Toggle Menu', 'phresh' ) ) . phresh_icon( 'menu' ) . phresh_icon( 'no' ); ?>

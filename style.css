@@ -640,6 +640,18 @@ input[type=submit] {
   position: sticky;
   top: 0; }
 
+.site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .site-branding .custom-logo {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 240px;
+    max-height: 40px;
+    margin-right: 2rem; }
+
 .site-title {
   margin: 0;
   font-size: 2rem; }
