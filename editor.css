@@ -524,6 +524,7 @@ input[type=url] {
      -moz-appearance: none;
           appearance: none;
   display: block;
+  max-width: 100%;
   padding: 1rem;
   background: white;
   border: solid 1px #ddd;
@@ -540,7 +541,8 @@ input[type=url] {
     border-color: #69c5e4; }
 
 select {
-  display: block; }
+  display: block;
+  max-width: 100%; }
 
 .button,
 button,
