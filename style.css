@@ -1342,3 +1342,6 @@ input.adminbar-input {
       color: #222; }
   .widget + .widget {
     margin-top: 4rem; }
+
+#wp-calendar {
+  text-align: center; }
