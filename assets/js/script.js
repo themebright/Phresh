@@ -41,7 +41,7 @@ jQuery( function( $ ) {
 
 	// ------------------------------------------------------------
 
-	$( '.site-header .menu-item-has-children' ).append( function() {
+	$( '.site-header .menu-item-has-children, .site-header .page_item_has_children' ).append( function() {
 
 		var expandMarkup = [];
 
