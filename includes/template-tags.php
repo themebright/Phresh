@@ -10,7 +10,7 @@
  * @param  array  $extra_classes Array of additional classes to add to the icon markup.
  * @return string                Class markup.
  */
-function phresh_icon( $icon = 'wordpress', $extra_classes = [] ) {
+function phresh_icon( $icon = 'wordpress', $extra_classes = array() ) {
 
 	$classes = array( 'dashicons', "dashicons-$icon" );
 
