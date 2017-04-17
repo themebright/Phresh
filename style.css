@@ -4,7 +4,7 @@
  * Theme URI:   https://themebright.com/product/phresh/
  * Author:      ThemeBright
  * Author URI:  https://themebright.com/
- * Description: A lightweight, one-column blogging theme with attractive heading imagery and clean typography.
+ * Description:
  * Version:     1.0.0
  * License:     GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -771,8 +771,8 @@ body.-nav-open .site-nav-toggle .dashicons-menu {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding: 2rem 0;
-      margin: -2rem 0; }
+      padding-bottom: 2rem;
+      margin-bottom: -2rem; }
       .site-nav .menu > ul > li + li {
         margin-left: 1rem; }
     .site-nav .menu > ul > .menu-item-has-children > a:after,
