@@ -14,7 +14,6 @@ if ( post_password_required() ) {
 			<ol class="comments">
 				<?php wp_list_comments( apply_filters( 'phresh_list_comments', array(
 					'style' => 'ol',
-					'type' => 'comment',
 					'avatar_size' => 80,
 					'reply_text' => phresh_icon( 'editor-break' ) . phresh_srt( esc_html__( 'Reply', 'phresh' ) ),
 				) ) ); ?>

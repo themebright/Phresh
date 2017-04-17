@@ -1186,11 +1186,13 @@ input.adminbar-input {
 .comments .children {
   margin-left: -4rem; }
 
-.comment {
+.comment,
+.pingback {
   margin-top: 4rem;
   padding-top: 4rem;
   border-top: solid 1px #ddd; }
-  .comment.bypostauthor .comment-author:before {
+  .comment.bypostauthor .comment-author:before,
+  .pingback.bypostauthor .comment-author:before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -1212,6 +1214,9 @@ input.adminbar-input {
     border-radius: 50%;
     color: #69c5e4;
     box-shadow: 0 0 0 3px white; }
+
+.pingback {
+  font-size: 1.4rem; }
 
 .comment-body {
   position: relative; }
@@ -1258,7 +1263,8 @@ input.adminbar-input {
 /**
  * Comment Form
  */
-.comment-respond {
+.comment-respond,
+.comments-closed {
   margin-top: 8rem; }
 
 #cancel-comment-reply-link {
